@@ -12,7 +12,7 @@ def main():
 #------------------------------------------------------------------------------
 if __name__ == "__main__":
 
-    timer.init(freq=2.5, mode=Timer.PERIODIC, callback=blink)
+    timer.init(freq=5, mode=Timer.PERIODIC, callback=blink)
 
     main()
 

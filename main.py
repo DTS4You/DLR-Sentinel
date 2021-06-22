@@ -1,2 +1,5 @@
-print("Hallo123")
-print("TTTHallo234")
+def main():
+    print("Hello World!")
+
+if __name__ == "__main__":
+    main()

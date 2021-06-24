@@ -23,8 +23,8 @@ colors_rgbw.append((0, 0, 0, 255))
 # colors = colors_rgb
 colors = colors_rgbw
 
-strip_1.brightness(42)
-strip_2.brightness(85)
+strip_1.brightness(20)
+strip_2.brightness(60)
 
 while True:
     for color in colors:

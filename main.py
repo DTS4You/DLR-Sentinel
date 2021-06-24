@@ -3,6 +3,7 @@ from neopixel import Neopixel
 
 numpix = 16
 strip_1 = Neopixel(numpix, 0, 2, "GRB")
+strip_2 = Neopixel(numpix, 1, 3, "GRB")
 
 red = (255, 0, 0)
 orange = (255, 165, 0)
@@ -23,10 +24,13 @@ colors_rgbw.append((0, 0, 0, 255))
 colors = colors_rgbw
 
 strip_1.brightness(42)
+strip_2.brightness(85)
 
 while True:
     for color in colors:
         for i in range(numpix):
             strip_1.set_pixel(i, color)
+            strip_2.set_pixel(i, color)
             time.sleep(0.1)
             strip_1.show()
+            strip_2.show()

@@ -40,3 +40,5 @@ while True:
             time.sleep(0.05)
             strip_1.show()
             strip_2.show()
+
+# End

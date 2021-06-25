@@ -12,7 +12,9 @@ green = (0, 255, 0)
 blue = (0, 0, 255)
 indigo = (75, 0, 130)
 violet = (138, 43, 226)
-white = (200,200,200)
+white = (255,255,255)
+grey = (50,50,50)
+black = (0,0,0)
 colors_rgb = (red, white, red, green, blue, indigo, violet)
 
 # same colors as normaln rgb, just 0 added at the end
@@ -24,13 +26,17 @@ colors_rgbw.append((0, 0, 0, 255))
 colors = colors_rgbw
 
 strip_1.brightness(20)
-strip_2.brightness(60)
+strip_2.brightness(50)
+
+strip_2.set_pixel_line_gradient(0, 7, white, grey)
+strip_2.set_pixel_line_gradient(8, 15, grey, white)
+
 
 while True:
     for color in colors:
         for i in range(numpix):
             strip_1.set_pixel(i, color)
-            strip_2.set_pixel(i, color)
-            time.sleep(0.1)
+            strip_2.rotate_right(1)
+            time.sleep(0.05)
             strip_1.show()
             strip_2.show()

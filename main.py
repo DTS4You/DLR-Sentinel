@@ -1,6 +1,7 @@
 import time
 from neopixel import Neopixel
 
+# Number of LEDs
 numpix = 16
 strip_1 = Neopixel(numpix, 0, 2, "GRB")
 strip_2 = Neopixel(numpix, 1, 3, "GRB")
